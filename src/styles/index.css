@@ -79,7 +79,7 @@
     @apply font-display text-[clamp(2rem,4vw,3.125rem)] font-bold leading-[1.3] tracking-[-0.025em];
   }
   .primary-button {
-    @apply inline-flex items-center justify-center rounded-lg bg-[#f1a501] px-7 py-5 text-sm font-medium text-white shadow-[0_16px_28px_-8px_#f1a50155] transition-transform hover:-translate-y-1;
+    @apply inline-flex items-center justify-center rounded-lg bg-[#f1a501] px-7 py-5 text-sm font-medium text-ink shadow-[0_16px_28px_-8px_#f1a50155] transition-transform hover:-translate-y-1;
   }
   .nav-link {
     @apply transition-colors hover:text-coral;
@@ -466,6 +466,11 @@
   }
 }
 @media (max-width: 1023px) {
+  #main-navigation {
+    max-height: calc(100svh - var(--header-height) - 16px);
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+  }
   .hero {
     min-height: auto;
   }

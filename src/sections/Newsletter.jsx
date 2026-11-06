@@ -64,7 +64,7 @@ export default function Newsletter() {
           </label>
           <button
             type="submit"
-            className="rounded-xl bg-gradient-to-b from-[#ff946d] to-[#ff7d68] px-10 py-5 font-medium text-white transition-transform hover:-translate-y-1"
+            className="rounded-xl bg-gradient-to-b from-[#ff946d] to-[#ff7d68] px-10 py-5 font-medium text-ink transition-transform hover:-translate-y-1"
           >
             Subscribe
           </button>
