@@ -16,10 +16,14 @@ Jadoo is a responsive travel landing page presenting services, destinations, tri
 
 This is a frontend demonstration. Live search, booking, authentication, and email delivery are not connected. English is the only available language. Footer controls without real URLs show hover feedback but do not navigate.
 
+## Live Website & Related Repository
+
+https://jadoo-lime.vercel.app/
+
 ## Tech Stack
 
 - **Interface:** React 19, JavaScript/JSX, Tailwind CSS 4.
-- **Tooling:** Vite 7 and the React Vite plugin.
+- **Tooling:** Vite 7, the React Vite plugin, and Prettier.
 
 ## Prerequisites
 
@@ -38,7 +42,7 @@ Node.js 22.12 or newer and npm.
 
 ## Running Locally
 
-Start development and open the address printed by Vite.
+Start development. Vite normally serves http://127.0.0.1:5173/ and prints the actual address if the port is occupied.
 
 ```sh
 npm run dev
@@ -54,15 +58,25 @@ npm run build
 npm run preview
 ```
 
-Publish `dist/` with a static host. The repository has no automated test script.
+Preview normally serves http://127.0.0.1:4173/. To require the documented development port, use `npm run dev -- --port 5173 --strictPort`.
+
+Check source formatting with the installed formatter:
+
+```sh
+npm exec -- prettier --check .
+```
+
+Publish `dist/` with a static host. The repository has no automated test, lint, or type-check script.
 
 ## Project Structure
 
 ```text
 public/                 # Public files and README preview
 src/
-├── assets/             # Images, logos, and decorations
-├── components/ui/      # Shared controls and dialogs
+├── assets/             # Images, fonts, icons, logos, and decorations
+├── components/
+│   ├── layout/         # Header and footer
+│   └── ui/             # Shared controls and dialogs
 ├── data/content.js     # Page content
 ├── sections/           # Hero, destinations, testimonials, and other sections
 ├── styles/index.css    # Theme and responsive styles
@@ -70,3 +84,8 @@ src/
 └── main.jsx            # React entry
 vite.config.js          # React and Tailwind build integration
 ```
+
+## Acknowledgements & Credits
+
+- Implemented from the supplied Jadoo UI and visual resources.
+- Poppins and Volkhov are bundled with their SIL Open Font License notices in `src/assets/fonts/`.
